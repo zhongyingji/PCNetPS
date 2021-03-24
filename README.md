@@ -1,4 +1,3 @@
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 # PCNet for Person Search
 
 ## Introduction
@@ -16,8 +15,7 @@ To run the code, following the instructions in [REPO.md](https://github.com/zhon
 
 
 ## Overview
-PCNet is based on RetinaNet, which is built upon a feature pyramid 
-$\{\textbf P_l\}$. The detection head firstly extracts ReID feature by CPP, which generates the pyramid of ReID feature $\{\textbf F^{\operatorname{reid}}_l\}$. The detection feature map, *e.g.*, $\{\textbf F^{\operatorname{reg}}_l\}$ and $\{\textbf F^{\operatorname{cls}}_l\}$ are then decoded from that. We then get the position survived non-maximum-suppression (NMS). CSA is applied to aggregate points vertically across pyramids for further enhancement. 
+PCNet is based on RetinaNet, which is built upon a feature pyramid $\{\textbf P_l\}$. The detection head firstly extracts ReID feature by CPP, which generates the pyramid of ReID feature $\{\textbf F^{\operatorname{reid}}_l\}$. The detection feature map, *e.g.*, $\{\textbf F^{\operatorname{reg}}_l\}$ and $\{\textbf F^{\operatorname{cls}}_l\}$ are then decoded from that. We then get the position survived non-maximum-suppression (NMS). CSA is applied to aggregate points vertically across pyramids for further enhancement. 
 
 <div align=center>
 
