@@ -9,7 +9,7 @@ Without feature cropping, one-stage detector almost retains the intact context w
 
 Specifically, the points aggregation process composes of two modules, **C**ontextual **P**oints **P**ooling (CPP) and **C**ross **S**cale **A**ggregation (CSA), both of which aim at utilizing the context to largest extent. Moreover, we propose a new detector head to alleviate the contradiction of learning commonness and differences in the joint person search model.
 
-To run the code, following the instructions in [REPO.md](https://github.com/zhongyingji/PCNetPS/blob/main/REPO.md).
+To run the code, following the instructions in [REPO.md](https://github.com/zhongyingji/PCNetPS/blob/main/REPO.md). We wrote a blog about the repo in Chinese at [Zhihu]().
 
 
 
