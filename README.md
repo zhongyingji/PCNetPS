@@ -49,7 +49,7 @@ As mentioned before, context outside box is sometimes crucial for discriminative
 
 **Cross Scale Aggregation**
 
-Although the feature from CPP contains certain context and is discriminative, it only contains information of a single scale. The person can be detected from any level of the pyramid, umere feature from CPP will cause scale misalignment. For the position in feature pyramid that survives NMS, CSA firstly selects the candidate points for it and then aggregates them as the final ReID feature. They are linearly combined. Except $f$, all other features are directly extracted from ![](http://latex.codecogs.com/svg.latex?\\{\textbf{F}^{\operatorname{reid}}_l\\}) from corresponding postions.
+Although the feature from CPP contains certain context and is discriminative, it only contains information of a single scale. The person can be detected from any level of the pyramid, umere feature from CPP will cause scale misalignment. For the position in feature pyramid that survives NMS, CSA firstly selects the candidate points for it and then aggregates them as the final ReID feature. They are linearly combined. Except ![](http://latex.codecogs.com/svg.latex?f), all other features are directly extracted from ![](http://latex.codecogs.com/svg.latex?\\{\textbf{F}^{\operatorname{reid}}_l\\}) from corresponding postions.
 
 
 <div align=center>
