@@ -15,7 +15,7 @@ To run the code, following the instructions in [REPO.md](https://github.com/zhon
 
 
 ## Overview
-PCNet is based on RetinaNet, which is built upon a feature pyramid ![1](http://latex.codecogs.com/svg.latex?\{\textbf P_l\}). The detection head firstly extracts ReID feature by CPP, which generates the pyramid of ReID feature $\{\textbf F^{\operatorname{reid}}_l\}$. The detection feature map, *e.g.*, $\{\textbf F^{\operatorname{reg}}_l\}$ and $\{\textbf F^{\operatorname{cls}}_l\}$ are then decoded from that. We then get the position survived non-maximum-suppression (NMS). CSA is applied to aggregate points vertically across pyramids for further enhancement. 
+PCNet is based on RetinaNet, which is built upon a feature pyramid ![](http://latex.codecogs.com/svg.latex?\\{\textbf{P}_l\\}). The detection head firstly extracts ReID feature by CPP, which generates the pyramid of ReID feature ![](http://latex.codecogs.com/svg.latex?\\{\textbf{F}^{\operatorname{reid}}_l\\}). The detection feature map, *e.g.*, ![](http://latex.codecogs.com/svg.latex?\\{\textbf{F}^{\operatorname{reg}}_l\\}) and ![](http://latex.codecogs.com/svg.latex?\\{\textbf{F}^{\operatorname{cls}}_l\\}) are then decoded from that. We then get the position survived non-maximum-suppression (NMS). CSA is applied to aggregate points vertically across pyramids for further enhancement. 
 
 <div align=center>
 
@@ -49,9 +49,7 @@ As mentioned before, context outside box is sometimes crucial for discriminative
 
 **Cross Scale Aggregation**
 
-Although the feature from CPP contains certain context and is discriminative, it only contains information of a single scale. The person can be detected from any level of the pyramid, umere feature from CPP will cause scale misalignment. For the position in feature pyramid that survives NMS, CSA firstly selects the candidate points for it and then aggregates them as the final ReID feature. They are linearly combined as:
-$f = f^{'}+\sum_{i\in\Omega}W(\bar{f_i}, f^{'})\times \bar{f_i}$. Except $f$, all other features are directly extracted from $\{\textbf F^{\operatorname{reid}}_l\}$ from corresponding postions.
-
+Although the feature from CPP contains certain context and is discriminative, it only contains information of a single scale. The person can be detected from any level of the pyramid, umere feature from CPP will cause scale misalignment. For the position in feature pyramid that survives NMS, CSA firstly selects the candidate points for it and then aggregates them as the final ReID feature. They are linearly combined. Except $f$, all other features are directly extracted from ![](http://latex.codecogs.com/svg.latex?\\{\textbf{F}^{\operatorname{reid}}_l\\}) from corresponding postions.
 
 
 <div align=center>
